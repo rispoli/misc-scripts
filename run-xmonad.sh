@@ -70,7 +70,7 @@ while true; do
     DATE=`date +"%a %Y-%m-%d %H:%M %Z"`
 	echo `ruby $COLORIZE "$LOADN" "1.5" "4.0" "<" "" "$LOAD"` "|" $cpu_temp $cpu_fan "|" $mobo_temp "|" $ram "|" $swap "|" $sda $home "|" $sdb $data1 "|" $sdc $data2 "|" $UPTIME "|" $DATE
     sleep 60
-done | dzen2 -e '' -xs 2 -y 756 -w 1024 -ta r -fg $FG -bg $BG -fn $FONT &
+done | dzen2 -e '' -xs 2 -y 1012 -w 1280 -ta r -fg $FG -bg $BG -fn $FONT &
 
 # and a workspace status bar
 dzen2 -e '' -xs 1 -w 125 -y 888 -ta l -fg $FG -bg $BG -fn $FONT < $PIPE &
