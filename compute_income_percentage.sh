@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -r bills=$(tail -n+2 ~/Dropbox/bills | cut -d, -f2 | paste -sd+ | bc)
+declare -r bills=$(cat ~/Dropbox/bills | cut -d, -f2 | paste -sd+ | bc)
 declare -r expenses=$(cat ~/Dropbox/money | cut -d, -f2 | paste -sd+ | bc)
 declare -r tickets=$(cat ~/Dropbox/tickets | cut -d, -f2- | sed -e 's/,/*/' | paste -sd+ | bc)
 declare -r income=$(cat ~/Dropbox/projects/banca/income | cut -d, -f2 | paste -sd+ | bc)
